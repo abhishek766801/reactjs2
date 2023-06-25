@@ -41,7 +41,7 @@ function App() {
   }
   return (
     <>
-/*
+      {/*
       <Router>
         <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode} key={new Date()} />
         <Alert alert={alert} />
@@ -57,7 +57,7 @@ function App() {
           </Switch>
         </div>
       </Router>
-      */
+      */}
       <app2 />
     </>
 
