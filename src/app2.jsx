@@ -9,7 +9,7 @@ function app2() {
   // Import CSS file
   return (
 <>
-  
+  <h1> hello</h1>
 </>
   );
 }

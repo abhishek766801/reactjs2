@@ -4,10 +4,11 @@ import TextForm from './components/TextForm.jsx';
 import About from './components/NavBar.jsx';
 import React, { useState } from 'react';
 import Alert from './components/Alert.jsx';
+import app2 from './app2';
 import ChildComponent from './components/ChildComponenet.jsx'
 import {
   BrowserRouter as Router,
-  Switch,
+  Routes,
   Route
 } from "react-router-dom";
 
@@ -40,24 +41,30 @@ function App() {
   }
   return (
     <>
-      <ChildComponent name='heloo' age='65' />
-      <Router>
-        <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode} key={new Date()} />
-        <Alert alert={alert} />
-        <div className="container my-3">
-          <Switch>
-            {/* /users --> Component 1
-        /users/home --> Component 2 */}
-            <Route exact path="/about">
-              <About mode={alert} />
-            </Route>
-            <Route exact path="/">
-              <TextForm showAlert={showAlert} heading="Try TextUtils - word counter, character counter, remove extra spaces" mode={mode} />
-            </Route>
-          </Switch>
-        </div>
-      </Router>
-    </>
+      
+   
+       <div className="container my-3">
+    
+    <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode} key={new Date()} />
+    <Alert alert={alert}/>
+    
+    <Router>
+   <Routes>
+     
+          <Route exact path="/about">
+            <About mode={mode} />
+          </Route>
+          <Route exact path="/">
+            <TextForm showAlert={showAlert} heading="Try TextUtils - word counter, character counter, remove extra spaces" mode={mode}/>
+          </Route>
+    
+    
+   </Routes>
+    
+    </Router>
+      </div>
+    </> 
+   
   );
 }
 
