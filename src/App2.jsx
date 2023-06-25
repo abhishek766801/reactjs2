@@ -1,6 +1,6 @@
 import './App.css';
-import React from 'react';
-function app2() {
+import React, { useState } from 'react';
+function App2() {
   const [name, setName] = useState(null);
   const [nameFieldText, setNameFieldText] = useState("gffggi");
   const handleButtonClick = () => {
@@ -8,10 +8,10 @@ function app2() {
   };
   // Import CSS file
   return (
-<>
-  <h1> hello</h1>
-</>
+    <>
+      <h1> hello</h1>
+    </>
   );
 }
-export default app2;
+export default App2;
 
